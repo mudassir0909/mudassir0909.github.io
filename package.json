@@ -1,10 +1,23 @@
 {
+  "name": "mudassirali.com",
+  "version": "1.0.0",
+  "description": "Frontend build process for my personal website",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://mmuddasir@bitbucket.org/mmuddasir/personal-website.git"
+  },
+  "author": "Mudassir Ali",
   "engines": {
     "node": ">= 0.10.0"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
+    "grunt-cache-bust": "^0.4.5",
     "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-cssmin": "^0.11.0",
     "grunt-contrib-jade": "^0.14.0",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-less": "^1.0.0",

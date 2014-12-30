@@ -1,6 +1,5 @@
 /*global module:false*/
 module.exports = function(grunt) {
-
   // Project configuration.
   grunt.initConfig({
     // Metadata.
@@ -14,11 +13,23 @@ module.exports = function(grunt) {
     concat: {
       options: {
         banner: '<%= banner %>',
-        stripBanners: true
+        stripBanners: true,
+        separator: ';',
+        sourceMap: true
       },
-      dist: {
-        src: ['lib/<%= pkg.name %>.js'],
-        dest: 'dist/<%= pkg.name %>.js'
+      vendor: {
+        src: [
+          'jquery/dist/jquery.js',
+          'bootstrap/dist/js/bootstrap.js',
+          'underscore/underscore.js'
+        ].map(function(path){
+          return './bower_components/' + path;
+        }),
+        dest: 'static/js/vendor.js'
+      },
+      main: {
+        src: [ 'js/main.js' ],
+        dest: 'static/js/main.js'
       }
     },
     uglify: {
@@ -26,8 +37,24 @@ module.exports = function(grunt) {
         banner: '<%= banner %>'
       },
       dist: {
-        src: '<%= concat.dist.dest %>',
-        dest: 'dist/<%= pkg.name %>.min.js'
+        files: {
+          'static/js/vendor.min.js': 'static/js/vendor.js',
+          'static/js/main.min.js': 'static/js/main.js'
+        }
+      }
+    },
+    less: {
+      main: {
+        files: {
+          'static/css/main.css': 'less/main.less'
+        }
+      }
+    },
+    cssmin: {
+      main: {
+        files: {
+          'static/css/main.min.css': 'static/css/main.css'
+        }
       }
     },
     jshint: {
@@ -57,25 +84,58 @@ module.exports = function(grunt) {
       files: ['test/**/*.html']
     },
     watch: {
-      gruntfile: {
-        files: '<%= jshint.gruntfile.src %>',
-        tasks: ['jshint:gruntfile']
+      js: {
+        files: ['js/**/*.js'],
+        tasks: ['concat']
       },
-      lib_test: {
-        files: '<%= jshint.lib_test.src %>',
-        tasks: ['jshint:lib_test', 'qunit']
+      css: {
+        files: ['less/**/*.less'],
+        tasks: ['less']
+      },
+      jade: {
+        files: ['jade/**/*.jade'],
+        tasks: ['jade']
+      }
+    },
+    cacheBust: {
+      options: {
+        encoding: 'utf8',
+        algorithm: 'md5',
+        length: 16,
+        ignorePatterns: []
+      },
+      main: {
+        files: [{
+          src: [ 'index.html' ]
+        }]
+      }
+    },
+    jade: {
+      compile: {
+        options: {
+          client: false,
+          pretty: true
+        },
+        files: {
+        'index.html': 'jade/index.jade'
+        }
       }
     }
   });
 
   // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-cache-bust');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
-
+  grunt.registerTask('default', ['concat', 'less', 'jade']);
+  grunt.registerTask('init', ['default', 'watch']);
+  grunt.registerTask('build', ['default', 'uglify', 'cssmin', 'cacheBust'])
 };
