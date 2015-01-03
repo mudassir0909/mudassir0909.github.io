@@ -8,7 +8,130 @@
   <link rel="stylesheet" href="static/css/main.css"/>
 </head>
 <body>
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <nav class="navbar navbar-default navbar-fixed-bottom hidden-xs hidden-sm">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="collapse navbar-collapse">
+            <ul id="main-nav" class="nav navbar-nav main-nav">
+              <li data-menuanchor="home" class="active"><a href="#home"><i class="fa fa-home fa-lg"></i>Home</a></li>
+              <li data-menuanchor="about"><a href="#about"><i class="fa fa-user fa-lg"></i>About</a></li>
+              <li data-menuanchor="resume"><a href="#resume"><i class="fa fa-code fa-lg"></i>Resume</a></li>
+              <li data-menuanchor="contact"><a href="#contact"><i class="fa fa-envelope fa-lg"></i>Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="js-sections-wrapper">
+    <section data-anchor="home" class="section jumbotron personal-intro">
+      <div class="picture-and-name-wrapper"><span>
+          <div class="profile-pic-wrapper text-center"><img src="/static/img/profile-pic.png" alt="Profile Picture" class="img-round"/></div>
+          <h1 class="heading name">Mudassir Ali</h1></span></div>
+      <h2 class="text-lighter designation"><span>Javascript Frontend Engineer</span></h2>
+      <div class="clearfix">
+        <p class="lead summary col-md-8 col-md-offset-2">Web developer for <span class="js-experience"></span>.  Most comfortable with Javascript & Ruby although I've written code in Python, Java & C. I do specialize in the Frontend aspect of Web Development.<br/><br/>Familiar with BackboneJS, EmberJS, AngularJS, Ruby on Rails, AWS Opsworks, Selenium. Recently started getting into Web Design.</p>
+      </div>
+    </section>
+    <section data-anchor="about" class="section about-me">
+      <h1 class="heading">About me</h1>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <ul role="tablist" class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#work-life" role="tab" data-toggle="tab">Work</a></li>
+            <li role="presentation"><a href="#personal-life" role="tab" data-toggle="tab">Personal Life</a></li>
+          </ul>
+          <div class="tab-content padded">
+            <div id="work-life" role="tabpanel" class="tab-pane active fade in">
+              <p class="lead clear-margin">I'm a web developer, who specializes on the frontend aspect right from designing the UX using beautiful UIs to bringing them to life using Javascript, HTML & CSS. I've experience building applications using popular MVC frameworks such as BackboneJS, AngularJS & EmberJS. On the backend I'm familiar with Ruby on Rails.<br/><br/>I like learning new technologies & experimenting with them. I'm big fan of designing the code architecture on a paper before diving into  <a href="//www.sublimetext.com/" target="_blank" class="link-disguise">my favorite IDE</a>,  I also have an  <a href="//en.wikipedia.org/wiki/Obsessive%E2%80%93compulsive_disorder" target="_blank" class="link-disguise">OCD</a>  for writing  <a href="//en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank" class="link-disguise">DRY</a>  code. I sometimes end up over engineering things !<br/><br/>I’m a huge supporter of Open Source & do frequently contribute to it on  <a href="//github.com/mudassir0909" target="_blank" class="link-disguise">Github</a>. I also frequently contribute to the  <a href="//stackoverflow.com/users/1482899/mudassir-ali" target="_blank" class="link-disguise">Stackoverflow</a>  community.</p>
+            </div>
+            <div id="personal-life" role="tabpanel" class="tab-pane fade">
+              <p class="lead clear-margin">I’m a  <a href="//www.quora.com/Mudassir-Ali-4" target="_blank" class="link-disguise">Quora</a> addict & a avid gamer. I love watching science fiction movies. I can't get enough of the TV series FRIENDS. I'm curious about the space and the universe. I also have a huge enthusiasm for animation, visual effects & motion graphics(you don't want to see my vfx videos though !).<br/><br/><small><strong>Basic needs:</strong></small>  My laptop, my phone & Wi-fi. As long as I've them with me I can even live on Pluto all alone !<br/><br/><small><strong>Sports:</strong></small>  I follow Cricket, although I've lost most of my interest after the retirement of Sachin Tendulkar.<br/><br/><small><strong>Things I'm not a big fan of:</strong></small> Reading books, watching anime, staying upto date with latest TV shows.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section data-anchor="resume" class="section">
+      <h1 class="heading">Resume</h1>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <ul role="tablist" class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#work-exp" role="tab" data-toggle="tab"><i class="fa fa-building"></i>Work Experience</a></li>
+            <li role="presentation"><a href="#skills" role="tab" data-toggle="tab"><i class="fa fa-code"></i>Skills</a></li>
+            <li role="presentation"><a href="#skills" role="tab" data-toggle="tab"><i class="fa fa-mortar-board"></i>Education</a></li>
+          </ul>
+          <div class="tab-content padded">
+            <div id="work-exp" role="tabpanel" class="tab-pane active fade in">
+              <div class="work-experience-widget">
+                <div class="timeline"><span class="duration active">March 2014
+                    <div class="text-center">to</div>present</span><span class="duration">June 2012
+                    <div class="text-center">to</div>March 2014</span><span class="duration">July 2011
+                    <div class="text-center">to</div>Dec 2011</span></div>
+                <div class="experience-detail">
+                  <div class="title"><strong class="role">Javascript Frontend Engineer</strong>,  <span class="company">Aplopio - Recruiterbox</span></div>
+                  <p class="experience-summary">
+                    Recruiterbox is the easiest way to receive and manage job applications to your company. It is more efficient than email and simpler than any other recruitment software.
+                    
+                  </p>
+                  <ul class="highlights">
+                    <li>Working primarily on BackboneJS, developing reusable user interface components and gets involved in UX design.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div id="skills" role="tabpanel" class="tab-pane fade">
+              <div class="row">
+                <div class="col-xs-3">
+                  <ul role="tablist" class="nav nav-tabs tabs-left">
+                    <li role="presentation" class="active"><a href="#frontend" role="tab" data-toggle="tab">Frontend</a></li>
+                    <li role="presentation"><a href="#backend" role="tab" data-toggle="tab">Backend</a></li>
+                    <li role="presentation"><a href="#testing" role="tab" data-toggle="tab">Testing</a></li>
+                    <li role="presentation"><a href="#design" role="tab" data-toggle="tab">Design</a></li>
+                    <li role="presentation"><a href="#deployment" role="tab" data-toggle="tab">Deployment</a></li>
+                  </ul>
+                </div>
+                <div class="col-xs-9">
+                  <div class="tab-content">
+                    <div id="frontend" class="tab-pane active fade in">
+                      <section>
+                        <header>
+                          <h4>Programming Languages</h4>
+                        </header>
+                        <div class="content">
+                          <div class="label label-info">Javascript</div>
+                          <div class="label label-info">Coffeescript</div>
+                        </div>
+                      </section>
+                      <section>
+                        <header>
+                          <h4>Frameworks & Libraries</h4>
+                        </header>
+                        <div class="content">
+                          <div class="label label-info">Javascript</div>
+                          <div class="label label-info">Coffeescript</div>
+                        </div>
+                      </section>
+                      <section>
+                        <header>
+                          <h4>Technologies</h4>
+                        </header>
+                        <div class="content">
+                          <div class="label label-info">Javascript</div>
+                          <div class="label label-info">Coffeescript</div>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
   <script src="static/js/vendor.js"></script>
   <script src="static/js/main.js"></script>
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
@@ -19,9 +142,7 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-58094087-1', 'auto');
     ga('send', 'pageview');
-    
   </script>
-  <!-- Custom fonts-->
   <script type="text/javascript">
     WebFontConfig = {
     google: { families: [ 'Oswald::latin' ] }
@@ -39,16 +160,16 @@
   </script>
   <script type="text/javascript">
     WebFontConfig = {
-    google: { families: [ 'Lato::latin' ] }
+      google: { families: [ 'Lato:300,400:latin' ] }
     };
     (function() {
-    var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-    '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
     })();
   </script>
 </body>

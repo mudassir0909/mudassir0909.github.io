@@ -1,0 +1,18 @@
+.tab-pane.fade#skills(role="tabpanel")
+  .row
+    .col-xs-3
+      ul.nav.nav-tabs.tabs-left(role="tablist")
+        li.active(role="presentation")
+          a(href="#frontend", role="tab", data-toggle="tab") Frontend
+        li(role="presentation")
+          a(href="#backend", role="tab", data-toggle="tab") Backend
+        li(role="presentation")
+          a(href="#testing", role="tab", data-toggle="tab") Testing
+        li(role="presentation")
+          a(href="#design", role="tab", data-toggle="tab") Design
+        li(role="presentation")
+          a(href="#deployment", role="tab", data-toggle="tab") Deployment
+
+    .col-xs-9
+      .tab-content
+        include ./skills/frontend

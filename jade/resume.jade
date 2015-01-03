@@ -1,0 +1,23 @@
+section.section(data-anchor="resume")
+  h1.heading Resume
+
+  .row
+    .col-md-8.col-md-offset-2
+
+      ul.nav.nav-tabs(role="tablist")
+        li.active(role="presentation")
+          a(href="#work-exp", role="tab", data-toggle="tab")
+            i.fa.fa-building
+            | Work Experience
+        li(role="presentation")
+          a(href="#skills", role="tab", data-toggle="tab")
+            i.fa.fa-code
+            | Skills
+        li(role="presentation")
+          a(href="#skills", role="tab", data-toggle="tab")
+            i.fa.fa-mortar-board
+            | Education
+
+      .tab-content.padded
+        include ./resume/work-experience
+        include ./resume/skills

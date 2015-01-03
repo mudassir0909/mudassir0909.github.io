@@ -14,14 +14,15 @@ module.exports = function(grunt) {
       options: {
         banner: '<%= banner %>',
         stripBanners: true,
-        separator: ';',
-        sourceMap: true
+        separator: ';'
+        // sourceMap: true
       },
       vendor: {
         src: [
           'jquery/dist/jquery.js',
           'bootstrap/dist/js/bootstrap.js',
-          'underscore/underscore.js'
+          'underscore/underscore.js',
+          'fullpage/jquery.fullPage.js'
         ].map(function(path){
           return './bower_components/' + path;
         }),
