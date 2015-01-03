@@ -8079,27 +8079,30 @@ section {
 .text-lighter {
   font-weight: 300;
 }
+.personal-intro {
+  background-image: url("/static/img/laptop-bg.png");
+  background-size: cover;
+  color: white;
+}
+.personal-intro h1 {
+  font-weight: 100;
+}
+.personal-intro h1,
+.personal-intro h2 {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
 .designation {
   margin-top: 10px;
+  font-weight: 200;
 }
 .designation span {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   display: inline-block;
   border-top: 1px solid #888;
   padding-top: 10px;
-}
-.personal-intro {
-  background-image: url("/static/img/laptop-bg.png");
-  background-size: cover;
-  color: white;
-}
-.personal-intro h1,
-.personal-intro h2 {
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-  font-weight: 100;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 0;
 }
 .summary {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);

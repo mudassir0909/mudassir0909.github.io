@@ -1,6 +1,5 @@
 @import "../bower_components/bootstrap/less/bootstrap.less";
 @import "../bower_components/fontawesome/less/font-awesome.less";
-// @import (inline) "../bower_components/fullpage/jquery.fullPage.css";
 @import (inline) "../bower_components/bootstrap-vertical-tabs/bootstrap.vertical-tabs.css";
 
 body {
@@ -41,8 +40,26 @@ section {
   font-weight: 300;
 }
 
+.personal-intro {
+  background-image: url("/static/img/laptop-bg.png");
+  background-size: cover;
+  color: white;
+
+  h1 {
+    font-weight: 100;
+  }
+
+  h1, h2 {
+    .text-with-shadow();
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+}
+
 .designation {
   margin-top: 10px;
+  font-weight: 200;
 
   span {
     .text-with-shadow();
@@ -50,20 +67,6 @@ section {
     display: inline-block;
     border-top: 1px solid #888;
     padding-top: 10px;
-  }
-}
-
-.personal-intro {
-  background-image: url("/static/img/laptop-bg.png");
-  background-size: cover;
-  color: white;
-
-  h1, h2 {
-    .text-with-shadow();
-    font-weight: 100;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 0;
   }
 }
 
@@ -90,3 +93,4 @@ section {
 
 @import "phone-styles.less";
 @import "./resume/work-experience.less";
+// @import (inline) "../bower_components/fullpage/jquery.fullPage.css";
