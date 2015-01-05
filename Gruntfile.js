@@ -53,11 +53,11 @@ module.exports = function(grunt) {
         ].map(function(path){
           return './bower_components/' + path;
         }),
-        dest: 'static/js/vendor.js'
+        dest: 'public/js/vendor.js'
       },
       main: {
         src: [ 'js/main.js' ],
-        dest: 'static/js/main.js'
+        dest: 'public/js/main.js'
       }
     },
     uglify: {
@@ -66,22 +66,22 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'static/js/vendor.min.js': 'static/js/vendor.js',
-          'static/js/main.min.js': 'static/js/main.js'
+          'public/js/vendor.min.js': 'public/js/vendor.js',
+          'public/js/main.min.js': 'public/js/main.js'
         }
       }
     },
     less: {
       main: {
         files: {
-          'static/css/main.css': 'less/main.less'
+          'public/css/main.css': 'less/main.less'
         }
       }
     },
     cssmin: {
       main: {
         files: {
-          'static/css/main.min.css': 'static/css/main.css'
+          'public/css/main.min.css': 'public/css/main.css'
         }
       }
     },
@@ -148,7 +148,7 @@ module.exports = function(grunt) {
           }
         },
         files: {
-        'index.html': 'jade/index.jade'
+        'public/index.html': 'jade/index.jade'
         }
       }
     }
