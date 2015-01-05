@@ -1,0 +1,54 @@
+.tab-pane.fade#oss-side-projects(role="tabpanel")
+  .work-experience-widget.js-work-experience-widget
+    .timeline
+      a(href="#", data-target="#foodraft").duration.active.js-timeline-duration
+        span.title Foodraft.com
+      a(href="#", data-target="#jsonresume").duration.js-timeline-duration
+        span.title Json Resume
+
+    .experience-detail.js-experience-detail#foodraft
+      .title
+        strong.role Co-Founder
+        |, #{' '}
+        span.company
+          a(href="//www.foodraft.com", target="_blank") Foodraft.com
+
+      p.experience-summary.
+        Worked as a full stack web developer & designer on various technologies such as Ruby on Rails, AngularJS, LESS & AWS Opsworks.
+
+      ul.highlights
+        li Implemented the JSON REST API using Ruby on Rails.
+        li
+          |Implemented location based search to find dairy suppliers around given lattitude & longitude using #{' '}
+          a(href="//postgis.net/", target="_blank") Postgis
+          | ,#{' '} database extender for PostgreSQL database.
+        li
+          |Implemented user authentication using #{' '}
+          a(href="github.com/plataformatec/devise", target="_blank") devise
+          | #{' '} gem
+        li Integrated Payment Gateway, transactional email & SMS using APIs.
+        li.
+          Involved in the responsive web design of the website right from picking the right color palette to designing the UI & UX to make the flow as intuitive as possible.
+        li Setup the development & production build process using Grunt.
+        li Deployed the web application on AWS Opsworks
+        li Built an admin application to perform all the CRUD operations using Ruby on Rails & AngularJS
+
+    .experience-detail.js-experience-detail(style="display:none")#jsonresume
+      .title
+        strong.role Core Contributor
+        |, #{' '}
+        span.company
+          a(href="//jsonresume.org", target="_blank") Json Resume
+
+      p.experience-summary.
+        I'm one of the core contributors of Json Resume, an open source initiative to create a JSON-based standard for resumes.
+
+      ul.highlights
+        li
+          | Developed a responsive theme #{' '}
+          a(href="//github.com/mudassir0909/jsonresume-theme-elegant", target="_blank") Elegant
+          |#{' '}, which won the competition held in November 2014 for the best theme.
+        li
+          | Wrote a node module #{' '}
+          a(href="//github.com/jsonresume/theme-utils", target="_blank") theme-utils
+          | #{' '} which provides a useful set of methods for jsonresume theme developers to build themes faster.

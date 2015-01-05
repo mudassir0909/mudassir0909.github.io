@@ -7,9 +7,6 @@
   }
 
   .timeline {
-    @color: rgb(41, 61, 114);
-    @color-lighter: lighten(@color, 20%);
-
     position: relative;
     width: 100px;
     text-align: center;
@@ -19,10 +16,11 @@
       .transition(background-color 0.5s ease);
       .square(100px);
 
+      text-decoration: none;
       position: relative;
       z-index: 10;
       border: 5px solid white;
-      display: inline-block;
+      display: table;
       font-weight: 100;
       font-size: 0.9em;
       text-align: center;
@@ -33,15 +31,22 @@
       border-radius: 50%;
       margin-bottom: 20px;
       color: white;
-      background-color: @color-lighter;
+      background-color: @ma-blue-lighter;
       cursor: pointer;
 
       &.active, &:hover {
-        background-color: @color;
+        text-decoration: none;
+        background-color: @ma-blue;
       }
 
       &.active {
         cursor: inherit;
+      }
+
+      .title {
+        width: 100%;
+        display: table-cell;
+        vertical-align: middle;
       }
     }
 
@@ -56,7 +61,7 @@
       left: 50%;
       margin-left: -@width/2;
       border-radius: 10px;
-      background-color: @color-lighter;
+      background-color: @ma-blue-lighter;
       z-index: 9;
     }
   }
@@ -65,5 +70,14 @@
     padding-left: 20px;
     padding-top: 20px;
     vertical-align: top;
+    font-size: 1.2em;
+  }
+
+  .company {
+    font-size: 0.9em;
+  }
+
+  .experience-summary, .highlights {
+    margin-top: 10px;
   }
 }

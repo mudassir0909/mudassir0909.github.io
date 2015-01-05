@@ -901,12 +901,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: #365198;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #23527c;
+  color: #22335f;
   text-decoration: underline;
 }
 a:focus {
@@ -3056,7 +3056,7 @@ fieldset[disabled] .btn-danger.active {
   background-color: #ffffff;
 }
 .btn-link {
-  color: #337ab7;
+  color: #365198;
   font-weight: normal;
   border-radius: 0;
 }
@@ -3077,7 +3077,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #23527c;
+  color: #22335f;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -3649,7 +3649,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #337ab7;
+  border-color: #365198;
 }
 .nav .nav-divider {
   height: 1px;
@@ -4370,7 +4370,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 6px 12px;
   line-height: 1.42857143;
   text-decoration: none;
-  color: #337ab7;
+  color: #365198;
   background-color: #ffffff;
   border: 1px solid #dddddd;
   margin-left: -1px;
@@ -4390,7 +4390,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  color: #23527c;
+  color: #22335f;
   background-color: #eeeeee;
   border-color: #dddddd;
 }
@@ -4532,11 +4532,11 @@ a.label:focus {
   background-color: #449d44;
 }
 .label-info {
-  background-color: #5bc0de;
+  background-color: #90a3d7;
 }
 .label-info[href]:hover,
 .label-info[href]:focus {
-  background-color: #31b0d5;
+  background-color: #6a84ca;
 }
 .label-warning {
   background-color: #f0ad4e;
@@ -4585,7 +4585,7 @@ a.badge:focus {
 }
 .list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #337ab7;
+  color: #365198;
   background-color: #ffffff;
 }
 .list-group-item > .badge {
@@ -4656,7 +4656,7 @@ a.badge:focus {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #337ab7;
+  border-color: #365198;
 }
 .thumbnail .caption {
   padding: 9px;
@@ -8163,10 +8163,11 @@ section {
   transition: background-color 0.5s ease;
   width: 100px;
   height: 100px;
+  text-decoration: none;
   position: relative;
   z-index: 10;
   border: 5px solid white;
-  display: inline-block;
+  display: table;
   font-weight: 100;
   font-size: 0.9em;
   text-align: center;
@@ -8182,10 +8183,16 @@ section {
 }
 .work-experience-widget .timeline .duration.active,
 .work-experience-widget .timeline .duration:hover {
+  text-decoration: none;
   background-color: #293d72;
 }
 .work-experience-widget .timeline .duration.active {
   cursor: inherit;
+}
+.work-experience-widget .timeline .duration .title {
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
 }
 .work-experience-widget .timeline:after {
   content: '';
@@ -8203,4 +8210,26 @@ section {
   padding-left: 20px;
   padding-top: 20px;
   vertical-align: top;
+  font-size: 1.2em;
+}
+.work-experience-widget .company {
+  font-size: 0.9em;
+}
+.work-experience-widget .experience-summary,
+.work-experience-widget .highlights {
+  margin-top: 10px;
+}
+.section-skills {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.section-skills .label-skill {
+  font-size: 1em;
+  border: 1px solid #4566bc;
+}
+.section-skills .content {
+  line-height: 2;
+}
+.section-skills:last-child {
+  margin-bottom: 0;
 }

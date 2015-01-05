@@ -1,4 +1,4 @@
-/*! mudassirali.com - v1.0.0 - 2015-01-04
+/*! mudassirali.com - v1.0.0 - 2015-01-06
 * Copyright (c) 2015 ; Licensed  */
 $(document).ready(function() {
     var experience,
@@ -18,8 +18,29 @@ $(document).ready(function() {
 
     $( '.js-experience' ).text( experience );
 
-    $('.js-sections-wrapper').fullpage({
+    $( '.js-sections-wrapper' ).fullpage({
         scrollingSpeed: 500,
         menu: '#main-nav'
     });
+
+    $( 'body' ).on( 'click', '.js-timeline-duration', function( e ) {
+        e.preventDefault();
+
+        var $current_target = $( e.currentTarget ),
+            $widget = $current_target.parents( '.js-work-experience-widget' );
+
+        if ( $current_target.hasClass( 'active' ) ) {
+            return;
+        }
+
+        $widget.find( '.js-experience-detail' )
+            .fadeOut()
+            .promise()
+            .done(function() {
+                $widget.find( '.js-timeline-duration.active' )
+                       .removeClass( 'active' );
+                $( $current_target.data( 'target' ) ).fadeIn();
+                $current_target.addClass( 'active' )
+            });
+    })
 })

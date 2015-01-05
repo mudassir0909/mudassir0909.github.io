@@ -1,3 +1,30 @@
+var skills = {
+  frontend: {
+    'Programming Languages': [ 'Javascript', 'Coffeescript' ],
+    'Technologies': [ 'HTML5', 'CSS3' ],
+    'Frameworks & Libraries': [ 'BackboneJS', 'EmberJS', 'AngularJS', 'JQuery', 'UnderscoreJS', 'Jade', 'HandlebarsJS', 'LESS', 'SASS', 'RaphaelJS' ],
+    'Package Managers': [ 'Bower' ]
+  },
+  backend: {
+    'Programming Languages': [ 'Ruby', 'Python', 'C', 'Java' ],
+    'Technologies': [ 'NodeJS (basics)', 'Ruby Rack Server' ],
+    'Frameworks & Libraries': [ 'Ruby on Rails', 'Devise', 'Grape API Middleware', 'Datamapper ORM' ],
+    'Databases': [ 'Postgres' ],
+    'Package Managers': [ 'npm', 'ruby gems' ]
+  },
+  testing: {
+    'Frameworks & Libraries': [ 'Jasmine', 'SinonJS', 'rspec' ],
+    'Automation': [ 'Selenium (Python)' ]
+  },
+  deployment: {
+    'Cloud Computing Services': [ 'AWS', 'Heroku' ],
+    'Task runners': [ 'Grunt' ]
+  },
+  design: {
+    'Tools': [ 'Sketch App', 'Adobe After Effects', 'Adobe Illustrator' ]
+  }
+};
+
 /*global module:false*/
 module.exports = function(grunt) {
   // Project configuration.
@@ -115,7 +142,10 @@ module.exports = function(grunt) {
       compile: {
         options: {
           client: false,
-          pretty: true
+          pretty: true,
+          data: {
+            skills: skills
+          }
         },
         files: {
         'index.html': 'jade/index.jade'

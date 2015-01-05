@@ -10,14 +10,20 @@ section.section(data-anchor="resume")
             i.fa.fa-building
             | Work Experience
         li(role="presentation")
+          a(href="#oss-side-projects", role="tab", data-toggle="tab")
+            i.fa.fa-github
+            | Open Source & Side Projects
+        li(role="presentation")
           a(href="#skills", role="tab", data-toggle="tab")
             i.fa.fa-code
             | Skills
         li(role="presentation")
-          a(href="#skills", role="tab", data-toggle="tab")
+          a(href="#education", role="tab", data-toggle="tab")
             i.fa.fa-mortar-board
             | Education
 
       .tab-content.padded
         include ./resume/work-experience
+        include ./resume/oss-side-projects
         include ./resume/skills
+        include ./resume/education

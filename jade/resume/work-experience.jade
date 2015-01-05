@@ -1,28 +1,66 @@
 .tab-pane.active.fade.in#work-exp(role="tabpanel")
-  .work-experience-widget
+  .work-experience-widget.js-work-experience-widget
     .timeline
-      span.duration.active
-        | March 2014
-        .text-center to
-        | present
-      span.duration
-        | June 2012
-        .text-center to
-        | March 2014
-      span.duration
-        | July 2011
-        .text-center to
-        | Dec 2011
+      a(href="#", data-target="#aplopio").duration.active.js-timeline-duration
+        span.title
+          | March 2014
+          .text-center to
+          | present
+      a(href="#", data-target="#navyug").duration.js-timeline-duration
+        span.title
+          | June 2012
+          .text-center to
+          | March 2014
+      a(href="#", data-target="#hp").duration.js-timeline-duration
+        span.title
+          | July 2011
+          .text-center to
+          | Dec 2011
 
-    .experience-detail
+    .experience-detail.js-experience-detail#aplopio
       .title
         strong.role Javascript Frontend Engineer
         |, #{' '}
-        span.company Aplopio - Recruiterbox
+        span.company
+          a(href="//aplopio.com", target="_blank") Aplopio - Recruiterbox
 
       p.experience-summary.
-        Recruiterbox is the easiest way to receive and manage job applications to your company. It is more efficient than email and simpler than any other recruitment software.
+        Delivered new features as a senior frontend engineer on their flagship product Recruiterbox, an ATS to manage job applications
 
       ul.highlights
         li.
-          Working primarily on BackboneJS, developing reusable user interface components and gets involved in UX design.
+          Working primarily on BackboneJS, developed reusable user interface components
+        li Gets involved in UI & UX design.
+        li Wrote shell scripts & grunt tasks to automate certain build processes.
+        li Refactored code and wrote selenium test cases in python.
+
+    .experience-detail.js-experience-detail(style="display:none")#navyug
+      .title
+        strong.role Software Engineer
+        |, #{' '}
+        span.company
+          a(href="//navyuginfo.com", target="_blank") Navyug Infosolutions
+
+      p.experience-summary.
+        Worked as a full stack web developer for the client PrimeRevenue on their products SCiCustomer & SCiMap
+
+      ul.highlights
+        li.
+          Translated business requirements provided by marketing into customer facing UI designs.
+        li Designed and maintained frontend & backend code.
+        li.
+          Implemented upgrades, patches, code releases & database changes.
+        li Did oversee unit testing, code reviews, debugging and documentation efforts.
+
+    .experience-detail.js-experience-detail(style="display:none")#hp
+      .title
+        strong.role Intern
+        |, #{' '}
+        span.company
+          a(href="//hp.com", target="_blank") Hewlett Packard Global Soft Private Limited
+
+      ul.highlights
+        li.
+          Developed & designed the UI of a desktop application iQ4U which aids Informatica developers in displaying the dependencies report of objects such as Mappings, Sessions & Workflows.
+        li.
+          Developed another desktop application iCrypt which helps the developers to update the encrypted files used in iQ4U.
