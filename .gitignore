@@ -32,4 +32,6 @@ nbproject
 node_modules/
 bower_components/
 stuff/
-public/
+public/css/
+public/js/
+public/index.html
