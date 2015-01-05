@@ -134,7 +134,7 @@ module.exports = function(grunt) {
       },
       main: {
         files: [{
-          src: [ 'index.html' ]
+          src: [ 'public/index.html' ]
         }]
       }
     },
