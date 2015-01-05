@@ -21,7 +21,7 @@ body {
 }
 
 .clear-margin {
-  margin: 0;
+  margin: 0 !important;
 }
 
 section {
@@ -92,7 +92,23 @@ section {
   }
 }
 
+.contact-section {
+  background-image: url("/static/img/blue-abstract.png");
+  background-size: contain;
+  color: white;
+
+  .get-in-touch {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+.hr-lg {
+  margin: 40px 0;
+}
+
 @import "phone-styles.less";
 @import "./resume/work-experience.less";
 @import "./resume/skills.less";
+@import "social-links.less";
 // @import (inline) "../bower_components/fullpage/jquery.fullPage.css";

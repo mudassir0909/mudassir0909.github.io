@@ -40,5 +40,8 @@ $(document).ready(function() {
                 $( $current_target.data( 'target' ) ).fadeIn();
                 $current_target.addClass( 'active' )
             });
-    })
+    });
+
+    // Initializing tooltips
+    $('[data-toggle="tooltip"]').tooltip();
 })
