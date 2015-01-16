@@ -1,30 +1,3 @@
-var skills = {
-  frontend: {
-    'Programming Languages': [ 'Javascript', 'Coffeescript' ],
-    'Technologies': [ 'HTML5', 'CSS3' ],
-    'Frameworks & Libraries': [ 'BackboneJS', 'EmberJS', 'AngularJS', 'JQuery', 'UnderscoreJS', 'Jade', 'HandlebarsJS', 'LESS', 'SASS', 'RaphaelJS' ],
-    'Package Managers': [ 'Bower' ]
-  },
-  backend: {
-    'Programming Languages': [ 'Ruby', 'Python', 'C', 'Java' ],
-    'Technologies': [ 'NodeJS (basics)', 'Ruby Rack Server' ],
-    'Frameworks & Libraries': [ 'Ruby on Rails', 'Devise', 'Grape API Middleware', 'Datamapper ORM' ],
-    'Databases': [ 'Postgres' ],
-    'Package Managers': [ 'npm', 'ruby gems' ]
-  },
-  testing: {
-    'Frameworks & Libraries': [ 'Jasmine', 'SinonJS', 'rspec' ],
-    'Automation': [ 'Selenium (Python)' ]
-  },
-  deployment: {
-    'Cloud Computing Services': [ 'AWS', 'Heroku' ],
-    'Task runners': [ 'Grunt' ]
-  },
-  design: {
-    'Tools': [ 'Sketch App', 'Adobe After Effects', 'Adobe Illustrator' ]
-  }
-};
-
 /*global module:false*/
 module.exports = function(grunt) {
   // Project configuration.
@@ -44,20 +17,9 @@ module.exports = function(grunt) {
         separator: ';'
         // sourceMap: true
       },
-      vendor: {
-        src: [
-          'jquery/dist/jquery.js',
-          'bootstrap/dist/js/bootstrap.js',
-          'underscore/underscore.js',
-          'fullpage/jquery.fullPage.js'
-        ].map(function(path){
-          return './bower_components/' + path;
-        }),
-        dest: 'public/js/vendor.js'
-      },
       main: {
         src: [ 'js/main.js' ],
-        dest: 'public/js/main.js'
+        dest: 'static/js/main.js'
       }
     },
     uglify: {
@@ -66,22 +28,21 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'public/js/vendor.min.js': 'public/js/vendor.js',
-          'public/js/main.min.js': 'public/js/main.js'
+          'static/js/main.min.js': 'static/js/main.js'
         }
       }
     },
     less: {
       main: {
         files: {
-          'public/css/main.css': 'less/main.less'
+          'static/css/main.css': 'less/main.less'
         }
       }
     },
     cssmin: {
       main: {
         files: {
-          'public/css/main.min.css': 'public/css/main.css'
+          'static/css/main.min.css': 'static/css/main.css'
         }
       }
     },
@@ -105,7 +66,7 @@ module.exports = function(grunt) {
         src: 'Gruntfile.js'
       },
       lib_test: {
-        src: ['lib/**/*.js', 'test/**/*.js']
+        src: ['js/**/*.js', 'test/**/*.js']
       }
     },
     qunit: {
@@ -134,7 +95,7 @@ module.exports = function(grunt) {
       },
       main: {
         files: [{
-          src: [ 'public/index.html' ]
+          src: [ 'index.html' ]
         }]
       }
     },
@@ -142,13 +103,10 @@ module.exports = function(grunt) {
       compile: {
         options: {
           client: false,
-          pretty: true,
-          data: {
-            skills: skills
-          }
+          pretty: true
         },
         files: {
-        'public/index.html': 'jade/index.jade'
+        'index.html': 'jade/index.jade'
         }
       }
     }

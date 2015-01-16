@@ -2,15 +2,15 @@ doctype html(lang="en")
 head
   title Mudassir Ali
   include meta-tags
-  link(rel='stylesheet', href='/css/main.css')
+  link(rel='stylesheet', href='static/css/main.css')
 
 body
-  include navbar-desktop
-  .js-sections-wrapper
-    include intro
-    include about-me
-    include resume
-    include contact
+  .container
+    #jr-card-widget(data-username="mudassirali")
+
+    div
+      .so-card-container
+        #so-card-widget(data-userid="1482899" data-theme="minimal")
 
   include js-scripts
   include google-analytics

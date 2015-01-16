@@ -1,0 +1,40 @@
+body,
+.jr-card-theme-default .jr-card {
+  font-family: 'Lato' !important;
+}
+.container {
+  width: 80%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.col-half {
+  width: 50%;
+}
+.so-card-container {
+  margin-top: 20px;
+  width: 49%;
+}
+#so-card-widget .so-card .so-header {
+  display: none;
+}
+#so-card-widget .so-card:before {
+  content: "StackOverflow";
+  font-family: 'oswald';
+  letter-spacing: 1;
+  font-size: 1.2em;
+  font-weight: 100;
+  color: #e68a00;
+}
+#so-card-widget .so-card .so-reputation {
+  color: #666666;
+  font-weight: 100;
+}
+#so-card-widget .so-card .so-reputation-label {
+  color: #e68a00;
+}
+#so-card-widget .so-card .so-content {
+  padding: 20px 0;
+}
+#so-card-widget .so-card .so-footer {
+  padding-top: 20px;
+}

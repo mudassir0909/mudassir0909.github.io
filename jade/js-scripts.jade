@@ -1,2 +1,11 @@
-script(src='/js/vendor.js')
-script(src='/js/main.js')
+script(
+  type="text/javascript",
+  src="//mudassir0909.github.io/jsonresume-card/dist/1.0.0/jr-card-widget.min.js")
+script(
+  type="text/javascript",
+  src="//mudassir0909.github.io/stackoverflow-card/dist/1.0.0/so-card-widget.min.js")
+script.
+  window.onload = function() {
+    debugger;
+    document.getElementsByClassName('so-reputation-label')[0].innerText = 'reputation';
+  }
